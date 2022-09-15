@@ -35,6 +35,14 @@ p {
     color: white;
 }
 
+h2{
+    color: white;
+}
+
+li{
+    color: white;
+}
+
 /* SERVICES SECTION BEGIN */
 .services .content {
     position: relative;
