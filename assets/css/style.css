@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600&family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
 
 html {
     box-sizing: border-box;
@@ -6,11 +7,17 @@ html {
 }
 
 body {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
-    background-color: #2b2b2b;
-    background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.574 14.85-2h6.334zM77.38 0C85.239 2.966 90.502 4 100 4V2c-6.842 0-11.386-.542-16.396-2h-6.225zM0 14c8.44 0 13.718-1.21 22.272-4.402l1.768-.661C33.64 5.347 39.647 4 50 4c10.271 0 15.362 1.222 24.629 4.928C84.112 12.722 89.438 14 100 14v-2c-10.271 0-15.362-1.222-24.629-4.928C65.888 3.278 60.562 2 50 2 39.374 2 33.145 3.397 23.34 7.063l-1.767.662C13.223 10.84 8.163 12 0 12v2z' fill='%23323232' fill-opacity='0.81' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-color: #23232a;
+    /* background-image: url(../images/jr-korpa-9XngoIpxcEo-unsplash.jpg); */
+    background-size: cover;
+    animation: pulsate 1s ease-in-out;
 }
+@keyframes pulsate {
+    0% {background-color: black;}
+    100% {background-color: #23232a;}
+  } 
 
 section {
     min-height: 100vh;
@@ -26,21 +33,80 @@ section {
     margin-right: auto;
     margin-left: auto;
   }
+.navbar {
+    background: rgba(22, 22, 33, 0.4);
+}
 
-nav a {
-    margin: 10px;
+.nav-link {
+    margin-right: 15px;
+    font-size: 14px;
+    color: rgb(233, 231, 231) !important;
+}
+
+.navbar-brand {
+    font-family: 'Kanit';
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: white !important;
 }
 
 p {
-    color: white;
+    color: black;
 }
 
+.hero {
+    background-image: url(/assets/images/jr-korpa-9XngoIpxcEo-unsplash.jpg);
+}
+
+
+/* Home Begin */
+.home {
+    position: relative;
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+.home h2 {
+    position: relative;
+    z-index: 1;
+    font-size: 4.5rem;
+    margin: 0 0 25px;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.home p {
+    position: relative;
+    z-index: 1;
+    font-size: 1.1rem;
+    color: rgb(255, 255, 255);
+    line-height: 1.4;
+}
+
+.home-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+/* Home End */
+
 /* SERVICES SECTION BEGIN */
+
+.services {
+    background-color: rgb(59, 59, 73);
+    border-top: solid 4px rgb(208, 81, 14, 0.3);
+    border-bottom: solid 4px rgb(208, 81, 14, 0.3);
+}
+
 .services .content {
     position: relative;
     z-index: 55;
     text-align: center;
-    padding: 45px 25px;
+    padding: 45px 40px;
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     -webkit-transition: all 0.3s ease;
@@ -139,10 +205,57 @@ p {
     color: rgba(255, 255, 255, 0.7);
 }
 
+#logo {
+    width: 90px;
+    height: auto;
+    transform: translateY(-5px);
+    margin-right: 12px;
+}
+
+.hvr-sweep-to-top {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .hvr-sweep-to-top:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #784124;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-sweep-to-top:hover, .hvr-sweep-to-top:focus, .hvr-sweep-to-top:active {
+    color: white;
+  }
+  .hvr-sweep-to-top:hover:before, .hvr-sweep-to-top:focus:before, .hvr-sweep-to-top:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+
 
 /* SERVICES SECTION END */
 
-
+/* Float Shadow */
 
 
 /* MEDIA QUERIES */
