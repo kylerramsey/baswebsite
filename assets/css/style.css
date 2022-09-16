@@ -4,20 +4,22 @@
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
+    height: 100%;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
-    background-color: #23232a;
+    background-color: #49547C;
     /* background-image: url(../images/jr-korpa-9XngoIpxcEo-unsplash.jpg); */
     background-size: cover;
     animation: pulsate 1s ease-in-out;
 }
-@keyframes pulsate {
+/* @keyframes pulsate {
     0% {background-color: black;}
-    100% {background-color: #23232a;}
-  } 
+    100% {background-color: #2a2c2e}
+  }  */
 
 section {
     min-height: 100vh;
@@ -33,9 +35,6 @@ section {
     margin-right: auto;
     margin-left: auto;
   }
-.navbar {
-    background: rgba(22, 22, 33, 0.4);
-}
 
 .nav-link {
     margin-right: 15px;
@@ -43,21 +42,31 @@ section {
     color: rgb(233, 231, 231) !important;
 }
 
+/* .navbar {
+    background-color: rgb(73, 84, 124, 0.5);
+} */
+.navbar {
+    width: 100%;
+    position: fixed;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-active {
+    background-color:rgb(75, 73, 114, 0.5);
+    box-shadow: 5px -1px 12px -5px grey;
+}
+
+
 .navbar-brand {
     font-family: 'Kanit';
     letter-spacing: 1px;
-    font-weight: 500;
+    font-weight: 400;
     color: white !important;
 }
 
 p {
     color: black;
 }
-
-.hero {
-    background-image: url(/assets/images/jr-korpa-9XngoIpxcEo-unsplash.jpg);
-}
-
 
 /* Home Begin */
 .home {
@@ -67,22 +76,27 @@ p {
     display: flex;
     align-items: center;
     overflow: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/tom-parkes-Ns-BIiW_cNU-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    position: relative;
   }
 
-.home h2 {
+.home h1 {
     position: relative;
     z-index: 1;
     font-size: 4.5rem;
     margin: 0 0 25px;
     line-height: 1;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255);
 }
 
 .home p {
     position: relative;
     z-index: 1;
     font-size: 1.1rem;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255, 0.8);
     line-height: 1.4;
 }
 
@@ -97,7 +111,7 @@ p {
 /* SERVICES SECTION BEGIN */
 
 .services {
-    background-color: rgb(59, 59, 73);
+    background-color: #4e5680;
     border-top: solid 4px rgb(208, 81, 14, 0.3);
     border-bottom: solid 4px rgb(208, 81, 14, 0.3);
 }
@@ -154,7 +168,7 @@ p {
 }
 
 .services h3 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     color: #222;
     margin-top: 25px;
@@ -259,7 +273,7 @@ p {
 
 
 /* MEDIA QUERIES */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .container {
       width: 750px;
     }
@@ -275,8 +289,8 @@ p {
     }
 }
 
-@media only screen and (max-width: 500px) {
+/* @media only screen and (max-width: 500px) {
     .content {
         margin-bottom: 10px;
     }
-}
+} */
