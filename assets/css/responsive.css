@@ -1,0 +1,20 @@
+.curveDownColor {
+    position: absolute;
+    bottom: -100px;
+    z-index: 555;
+}
+
+.home .curveDownColor {
+    bottom: -2px;
+    height: 80px;
+    transform: rotate(180deg);
+}
+.pageload-overlay svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+.pageload-overlay svg path {
+    fill: #000;
+}

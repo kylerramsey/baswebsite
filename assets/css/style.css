@@ -9,9 +9,10 @@ html {
 
 body {
     height: 100%;
+    line-height: 2.2;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
-    background-color: #49547C;
+    background-color: #0D1627;
     /* background-image: url(../images/jr-korpa-9XngoIpxcEo-unsplash.jpg); */
     background-size: cover;
     animation: pulsate 1s ease-in-out;
@@ -29,11 +30,13 @@ section {
     flex-direction: column;
 }
 
-.container {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+.container-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-start;
+    max-width: 500px;
+    transform: translate(-260px);
   }
 
 .nav-link {
@@ -58,8 +61,7 @@ section {
 
 
 .navbar-brand {
-    font-family: 'Kanit';
-    letter-spacing: 1px;
+    font-family: 'Montserrat';
     font-weight: 400;
     color: white !important;
 }
@@ -67,6 +69,7 @@ section {
 p {
     color: black;
 }
+
 
 /* Home Begin */
 .home {
@@ -106,12 +109,31 @@ p {
     padding: 0 20px;
     text-align: center;
 }
+
+#hide1, #hide2, #hide3{
+    display: inline-block;
+    max-width: 0;
+    opacity: 0;
+    transition: max-width 0.4s, opacity 0.4s;
+  }
+  
+#zk-trigger:hover #hide1, #zk-trigger:hover #hide3{
+    max-width: 100px;
+    opacity: 1;
+    transition: max-width 0.4s, opacity 0.4s;
+}
+
+#zk-trigger:hover #hide2 {
+    max-width: 200px;
+    opacity: 1;
+    transition: max-width 0.4s, opacity 0.4s;
+}
 /* Home End */
 
 /* SERVICES SECTION BEGIN */
 
 .services {
-    background-color: #4e5680;
+    background-color: #242943;
     border-top: solid 4px rgb(208, 81, 14, 0.3);
     border-bottom: solid 4px rgb(208, 81, 14, 0.3);
 }
