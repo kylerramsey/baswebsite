@@ -130,6 +130,49 @@ p {
 }
 /* Home End */
 
+
+/* About Start */
+section.about {
+    color: white;
+    text-align: left;
+    padding-left: 13%;
+    padding-right: 15%;
+    margin-right: 45%;
+}
+
+section.about h1{
+    font-size: 4.5rem;
+}
+
+section.about p{
+    color: white;
+    text-align: left;
+}
+/* About End */
+
+/* Values Start */
+section.values {
+    color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+section.values h1{
+    font-size: xx-large;
+}
+
+section.values h3{
+    font-size: 1.5rem;
+}
+
+section.values p{
+    color: white;
+    font-size: small;
+    text-align: left;
+}
+/* Values End */
+
 /* SERVICES SECTION BEGIN */
 
 .services {
