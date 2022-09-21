@@ -149,6 +149,29 @@ section.about p{
 }
 /* About End */
 
+/* Values Start */
+section.values {
+    color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+section.values h1{
+    font-size: xx-large;
+}
+
+section.values h3{
+    font-size: 1.5rem;
+}
+
+section.values p{
+    color: white;
+    font-size: small;
+    text-align: left;
+}
+/* Values End */
+
 /* SERVICES SECTION BEGIN */
 
 .services {
@@ -314,6 +337,13 @@ section.about p{
 
 
 /* MEDIA QUERIES */
+
+@media (max-width: 480px) {
+    .container {
+      width: auto;
+    }
+}
+/*
 @media (max-width: 768px) {
     .container {
       width: 750px;
@@ -328,7 +358,7 @@ section.about p{
     .container {
       width: 1170px;
     }
-}
+} */
 
 /* @media only screen and (max-width: 500px) {
     .content {
