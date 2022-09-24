@@ -47,6 +47,11 @@
         font-size: 1.3rem;
     }
 
+    /* Hide logo slider on mobile */
+    .logos {
+        display: none;
+    }
+
   }
   @media (min-width: 992px) {
     .container {
