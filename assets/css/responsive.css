@@ -51,6 +51,9 @@
     .logos {
         display: none;
     }
+    .services h4 {
+        display: none;
+    }
 
   }
   @media (min-width: 992px) {

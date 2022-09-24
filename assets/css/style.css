@@ -12,7 +12,7 @@ body {
     line-height: 2.2;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
-    background-color: #1b273d;
+    background-color: #1C1F2F;
     /* background-image: url(../images/jr-korpa-9XngoIpxcEo-unsplash.jpg); */
     background-size: cover;
     animation: pulsate 1s ease-in-out;
@@ -53,7 +53,7 @@ section {
 }
 
 .nav-active {
-    background-color:rgb(75, 73, 114, 0.5);
+    background-color:rgba(51, 50, 77, 0.39);
     box-shadow: 5px -1px 12px -5px grey;
 }
 
@@ -171,19 +171,13 @@ section.values p{
 
 /* SERVICES SECTION BEGIN */
 
-.services {
-    background-color: #1c1f2f;
-    border-top: solid 4px rgb(208, 81, 14, 0.2);
-    border-bottom: solid 4px rgb(208, 81, 14, 0.2);
-}
-
 .services .content {
     position: relative;
     z-index: 55;
     text-align: center;
     padding: 45px 40px;
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background-color: #4F6D7A;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease-in-out 0s;
     border-radius: 3%;
@@ -231,7 +225,7 @@ section.values p{
 .services h3 {
     font-size: 16px;
     font-weight: 500;
-    color: #222;
+    color: #f3f7fc;
     margin-top: 25px;
     margin-bottom: 15px;
 }
@@ -252,10 +246,35 @@ section.values p{
     text-align: center;
 }
 
+.services h4 {
+    color: #92a5ad;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7rem;
+    text-align: center;
+    padding-top: 5rem;
+    margin-bottom: 1rem;
+}
+
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
 .section-title h2 {
     font-size: 45px;
-    font-weight: 600;
-    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    color: #5ea5b8ff;
     display: inline-block;
     position: relative;
 }
@@ -267,7 +286,7 @@ section.values p{
     left: 50%;
     transform: translateX(-50%);
     width: 92px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 2px solid rgba(79, 109, 122, 0.5);
 }
 
 .section-title h2:before {
@@ -277,7 +296,7 @@ section.values p{
     left: 50%;
     transform: translateX(-50%);
     font-size: 15px;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(79, 109, 122, 0.7);
 }
 
 #logo {
@@ -464,7 +483,8 @@ section.values p{
     float: left;
     height: 100%;
     min-height: 1px;
-    padding-top: 50px;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
 }
 [dir='rtl'] .slick-slide
 {
@@ -503,6 +523,6 @@ section.values p{
 /* DEVELOPMENT START */
 .development {
     margin-bottom: 50px;
-    background-color: #1b273d;
-    border-bottom: solid 4px rgb(208, 81, 14, 0.2);
+    background-color: #1C1F2F;
+    /* border-bottom: solid 4px rgb(208, 81, 14, 0.2); */
 }
