@@ -1,0 +1,218 @@
+//- Google Fonts
+$font-google-primary: 'https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap';
+$font-google-secondary: 'https://fonts.googleapis.com/css2?family=Montserrat&display=swap';
+
+//- @type List
+$abril-fatface: 'Abril Fatface', cursive;
+$montserrat: 'Montserrat', sans-serif;
+
+//- Typography
+$base-font-family: $montserrat;
+$heading-font-family: $abril-fatface;
+
+$font-size-small: 0.875em;
+
+/*- Screen Sizes*/
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+/* COLOR HEX */
+$cadet: #4f6d7aff;
+$maximum-blue: #5ea5b8ff;
+$columbia-blue: #c0d6dfff;
+$platinum: #eaeaeaff;
+$cultured: #f3f3f3ff;
+$nero: #444444;
+
+// Section Divider Variables
+$bg: #10111F;
+$barsize: 15px;
+
+/* COLOR Gradient */
+$dl-gradient-right: linear-gradient(90deg, rgba(245, 244, 244, 0.065) 20%, rgba(234, 234, 234, 0) 0%);
+
+$body-background-color: $platinum;
+$body-text-color: $nero;
+
+//- Global Functions
+/*import fonts*/
+@if variable-exists(font-google-primary) {
+  @import url($font-google-primary);
+}
+@if variable-exists(font-google-secondary) {
+  @import url($font-google-secondary);
+}
+
+//- Global Mixins
+
+/*media queries*/
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+.dl-blurbs {
+	display: grid;
+	@include tablet-up {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2vw;
+	}
+}
+/* LIST */
+dl {
+    counter-reset: count;
+	background: $dl-gradient-right;
+	padding-left: 4vw; //default is smartphone
+	padding-right: 4vw;
+	margin-left: 3rem;
+	@include tablet-up {padding-left: 2vw;}
+	@include desktop {
+		padding-top: 1vw;
+		padding-bottom: 1vw;
+	}
+}
+dl + dl {
+	counter-reset: counter 4;
+}
+dt {
+    counter-increment: count;
+	color: $cadet;
+	font-family: $base-font-family;
+	font-size: 3.7vw;
+	text-transform: uppercase;
+}
+dt::before {
+  content: counter(count, decimal-leading-zero)".";
+	font-family: $heading-font-family;
+	color: $maximum-blue;
+	margin-left: -1vw;
+	padding-right: 12px;
+}
+
+dd {
+	margin-left: 5vw;
+	margin-bottom: 2vh;
+    color: rgb(253, 213, 193);
+    font-size: 1.1rem;
+}
+
+// Section Dividers
+
+.hr {
+    
+    width: 100%;
+    height: 1px;
+    display: block;
+    position: relative;
+    margin-bottom: 0em;
+    padding: 2em 0;
+
+    &:after,
+    &:before {
+
+        content: "";
+        position: absolute;
+
+        width: 100%;
+        height: 1px;
+        bottom: 50%;
+        left: 0;
+
+    }
+
+    &:before {
+
+        background: linear-gradient( 90deg, $bg 0%, $bg 50%, transparent 50%, transparent 100% );
+        background-size: $barsize;
+        background-position: center;
+        z-index: 1;
+
+    }
+
+    &:after {
+
+        transition: opacity 0.3s ease, animation 0.3s ease;
+
+        background: linear-gradient(
+            to right, 
+            #62efab 5%, 
+            #F2EA7D 15%, 
+            #F2EA7D 25%, 
+            #FF8797 35%, 
+            #FF8797 45%, 
+            #e1a4f4 55%, 
+            #e1a4f4 65%, 
+            #82fff4 75%, 
+            #82fff4 85%, 
+            #62efab 95%);
+
+        background-size: 200%;
+        background-position: 0%;
+        animation: bar 15s linear infinite;
+
+    }
+
+    @keyframes bar {
+
+        0% { background-position: 0%; }
+        100% { background-position: 200%; }
+
+    }
+    
+}
+
+.hr.anim {
+    &:before {
+        background: linear-gradient( 
+            90deg, 
+            $bg 0%, $bg 5%, 
+            transparent 5%, transparent 10%, 
+            $bg 10%, $bg 15%, 
+            transparent 15%, transparent 20%, 
+            $bg 20%, $bg 25%,
+            transparent 25%, transparent 30%,
+            $bg 30%, $bg 35%, 
+            transparent 35%, transparent 40%, 
+            $bg 40%, $bg 45%, 
+            transparent 45%, transparent 50%, 
+            $bg 50%, $bg 55%,
+            transparent 55%, transparent 60%,
+            $bg 60%, $bg 65%,
+            transparent 65%, transparent 70%, 
+            $bg 70%, $bg 75%, 
+            transparent 75%, transparent 80%, 
+            $bg 80%, $bg 85%,
+            transparent 85%, transparent 90%,
+            $bg 90%, $bg 95%, 
+            transparent 95%, transparent 100% );
+
+        background-size: $barsize * 10;
+        background-position: center;
+        z-index: 1;
+        
+        animation: bar 120s linear infinite;
+        
+    }
+    
+    &:hover {
+        &:before {
+            animation-duration: 20s;
+        }
+        &:after {
+            animation-duration: 2s;
+        }
+    }
+}

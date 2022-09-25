@@ -1,0 +1,80 @@
+.curveDownColor {
+    position: absolute;
+    bottom: -100px;
+    z-index: 555;
+}
+
+.home .curveDownColor {
+    bottom: -2px;
+    height: 80px;
+    transform: rotate(180deg);
+}
+.pageload-overlay svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+.pageload-overlay svg path {
+    fill: #000;
+}
+
+/*===============================================
+            Smart phone and tablets
+===============================================*/
+
+@media (max-width: 768px) {
+    .container {
+      width: auto;
+    }
+
+    .navbar-brand {
+        font-size: 0.8rem;
+    }
+
+    .container-home {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: center;
+        transform: translate(0px);
+        padding: 1rem;
+    }
+    .container-home h1 {
+        font-size: 3rem;
+    }
+    .container-home h4 {
+        font-size: 1.3rem;
+    }
+
+    /* Hide logo slider on mobile */
+    .logos {
+        display: none;
+    }
+    .services h4 {
+        display: none;
+    }
+
+  }
+  @media (min-width: 992px) {
+    .container {
+      width: auto;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+}
+
+@media screen and (max-width: 893px) {
+    .copyright {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 893px){
+    .copyright1 {
+        display: none;
+    }
+}

@@ -1,0 +1,129 @@
+/*- Screen Sizes*/
+/* COLOR HEX */
+/* COLOR Gradient */
+/*import fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+/*media queries*/
+.dl-blurbs {
+  display: grid;
+}
+@media (min-width: 768px) {
+  .dl-blurbs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;
+  }
+}
+
+/* LIST */
+dl {
+  counter-reset: count;
+  background: linear-gradient(90deg, rgba(245, 244, 244, 0.065) 20%, rgba(234, 234, 234, 0) 0%);
+  padding-left: 4vw;
+  padding-right: 4vw;
+  margin-left: 3rem;
+}
+@media (min-width: 768px) {
+  dl {
+    padding-left: 2vw;
+  }
+}
+@media (min-width: 1024px) {
+  dl {
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+  }
+}
+
+dl + dl {
+  counter-reset: counter 4;
+}
+
+dt {
+  counter-increment: count;
+  color: #4f6d7a;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.7vw;
+  text-transform: uppercase;
+}
+
+dt::before {
+  content: counter(count, decimal-leading-zero) ".";
+  font-family: "Abril Fatface", cursive;
+  color: #5ea5b8;
+  margin-left: -1vw;
+  padding-right: 12px;
+}
+
+dd {
+  margin-left: 5vw;
+  margin-bottom: 2vh;
+  color: rgb(253, 213, 193);
+  font-size: 1.1rem;
+}
+
+.hr {
+  width: 100%;
+  height: 1px;
+  display: block;
+  position: relative;
+  margin-bottom: 0em;
+  padding: 2em 0;
+}
+.hr:after, .hr:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 50%;
+  left: 0;
+}
+.hr:before {
+  background: linear-gradient(90deg, #10111F 0%, #10111F 50%, transparent 50%, transparent 100%);
+  background-size: 15px;
+  background-position: center;
+  z-index: 1;
+}
+.hr:after {
+  transition: opacity 0.3s ease, -webkit-animation 0.3s ease;
+  transition: opacity 0.3s ease, animation 0.3s ease;
+  transition: opacity 0.3s ease, animation 0.3s ease, -webkit-animation 0.3s ease;
+  background: linear-gradient(to right, #62efab 5%, #F2EA7D 15%, #F2EA7D 25%, #FF8797 35%, #FF8797 45%, #e1a4f4 55%, #e1a4f4 65%, #82fff4 75%, #82fff4 85%, #62efab 95%);
+  background-size: 200%;
+  background-position: 0%;
+  -webkit-animation: bar 15s linear infinite;
+          animation: bar 15s linear infinite;
+}
+@-webkit-keyframes bar {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+@keyframes bar {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+.hr.anim:before {
+  background: linear-gradient(90deg, #10111F 0%, #10111F 5%, transparent 5%, transparent 10%, #10111F 10%, #10111F 15%, transparent 15%, transparent 20%, #10111F 20%, #10111F 25%, transparent 25%, transparent 30%, #10111F 30%, #10111F 35%, transparent 35%, transparent 40%, #10111F 40%, #10111F 45%, transparent 45%, transparent 50%, #10111F 50%, #10111F 55%, transparent 55%, transparent 60%, #10111F 60%, #10111F 65%, transparent 65%, transparent 70%, #10111F 70%, #10111F 75%, transparent 75%, transparent 80%, #10111F 80%, #10111F 85%, transparent 85%, transparent 90%, #10111F 90%, #10111F 95%, transparent 95%, transparent 100%);
+  background-size: 150px;
+  background-position: center;
+  z-index: 1;
+  -webkit-animation: bar 120s linear infinite;
+          animation: bar 120s linear infinite;
+}
+.hr.anim:hover:before {
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+}
+.hr.anim:hover:after {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}/*# sourceMappingURL=dlgrid.css.map */
