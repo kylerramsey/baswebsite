@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bell Automation Systems</title>
+    <script src="https://kit.fontawesome.com/8460943e2b.js" crossorigin="anonymous"></script>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -16,6 +17,19 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png" />
+    <!-- About Section -->
+    <style>
+        section.about{
+            border: solid red;
+            width: auto;
+            height: auto;
+            background-image: url("assets/images/automation1.png");
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            content: "";
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
     <!-- Start Preloader -->
@@ -24,7 +38,7 @@
 
     <!-- Start Home -->
 <main>
-        <nav class="navbar navbar-expand-sm fixed-top" id="myNav">
+        <nav class="navbar navbar-dark navbar-expand-sm fixed-top" id="myNav">
             <a href="#"><img id="logo" src="assets/images/logoorange-removebg-preview.png" alt=""></a>
             <a class="navbar-brand" href="#"><span id="zk-trigger">
                 B<span id="hide1" class="hide">ell</span>
@@ -70,17 +84,66 @@
 
     <!-- Start About -->
     <section class="about" id="about">
-        <h1>About BAS Corp</h1>
-        <p>BAS is a Technology company specializing in software architecture, project design management, and 
+        <div class="container" id="talk">
+            <h1 title="BELL AUTOMATION SYSTEMS">About BAS</h1>
+            <br>
+            <p>BAS is a Technology company specializing in software architecture, project design management, and 
             user interface. We are a team of IT professionals who master a wide variety of technologies. 
             Our team consists of senior consultants, Automation experts, experienced software architects, designers (UX/UI) and support staff. 
             Our clients are our priority, we make an additional effort to achieve total satisfaction and the satisfactory development of our projects.
-        </p>
+            </p>
+        </div>
+        <div class="container" id="luka-tim">
+            <h1>We Always Give You 100%</h1>
+            <div class="ui-widgets">
+                <div class="ui-values">100%</div>
+                <div class="ui-labels">Results</div>
+            </div>
+      
+            <div class="ui-widgets">
+                <div class="ui-values">100%</div>
+                <div class="ui-labels">Trust</div>
+            </div>
+
+            <div class="ui-widgets">
+                <div class="ui-values">100%</div>
+                <div class="ui-labels">Integrity</div>
+            </div>
+        </div>
     </section>
     <!-- End About -->
 
     <!-- Start Values -->
-    <section class="values" id="values"></section>
+    <section class="values" id="values">
+        <h1>Our Values</h1>
+        <div class="card-deck" style="margin:0 auto; display: flex">
+            <!-- Teamwork Card -->
+            <div class="card text-white bg-dark" style="padding: 25px; margin-top: 2%">
+                <h3 class="card-title" style="text-align: center;">Teamwork</h3>
+                <p class="card-text">We have development groups with excellent personal relationships and
+                     feedback of knowledge and information allowing the optimization of software development.</p>
+            </div>
+            <!-- Quality Card -->
+            <div class="card text-white bg-dark" style="padding: 25px; margin-top: 2%">
+                <h3 class="card-title" style="text-align: center;">Quality</h3>
+                <p class="card-text">The developed projects guarantee an optimal and responsive operation, 
+                    adapting to the established requirements and needs of our customers.</p>
+            </div>
+            <!-- Ethics Card -->
+            <div class="card text-white bg-dark" style="padding: 25px; margin-top: 2%">
+                <h3 class="card-title" style="text-align: center;">Ethics</h3>
+                <p class="card-text">Our values ​​force us to develop programs in compliance with ethical values,
+                     having our own ideas focused on each specific client.</p>
+            </div>
+            <!-- Adaptiveness Card -->
+            <div class="card text-white bg-dark" style="padding: 25px; margin-top: 2%">
+                <h3 class="card-title" style="text-align: center;">Adaptiveness</h3>
+                <p class="card-text">We use agile methodologies (XP, SCRUM and Kanban) that allow us to adapt to 
+                    each project depending on its circumstances. In this way, we achieve flexibility and speed to 
+                    respond to the individual demands and we can adapt to any scenario.</p>
+            </div>
+        </div>
+    </section>
     <!-- End Values -->
 
     <!-- Start Services -->
@@ -191,7 +254,29 @@
 
 </main>
     <!-- Start Footer -->
-    <footer></footer>
+    <footer>
+        <div class="footer-container">
+            <div class="footer">
+                <div class="footer-heading footer-1">
+                    <h4>CONTACT US</h4>
+                    </i><a href="https://www.linkedin.com/company/bell-automation-systems/" target="blank"><i class="fa-brands fa-linkedin" style="margin-right:0.5rem"></i>LinkedIn</a>
+                    <a href="mailto:bellautomationsystems@gmail.com?subject=Reaching out"><i class="fa-regular fa-envelope" style="margin-right:0.5rem"></i>Email</a>
+                </div>
+                <div class="footer-heading footer-1">
+                    <h4>ABOUT</h4>
+                    <a href="#about">ABOUT US</a>
+                    <a href="#values">OUR VALUES</a>
+                    <a href="#services">SERVICES</a>
+                    <a href="#development">DEVELOPMENT PROCESS</a>
+                </div>
+                <a class="copyright1"style="color:#b0b0b0;padding-bottom: 1rem;"> &copy; Bell Automation Systems</a>
+            </div>
+        </div>
+        <div class="copyright">
+        <a style="color:#b0b0b0;padding-bottom: 1rem;"> &copy; Bell Automation Systems</a> 
+        </div>
+        
+    </footer>
     <!-- End Footer -->
 
     <!-- Linked Scripts -->

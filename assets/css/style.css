@@ -45,13 +45,11 @@ section {
     color: rgb(233, 231, 231) !important;
 }
 
-/* .navbar {
-    background-color: rgb(73, 84, 124, 0.5);
-} */
 .navbar {
     width: 100%;
     position: fixed;
     transition: 0.3s ease-in-out;
+    padding-bottom: 0;
 }
 
 .nav-active {
@@ -134,9 +132,12 @@ p {
 section.about {
     color: white;
     text-align: left;
-    padding-left: 13%;
-    padding-right: 15%;
-    margin-right: 45%;
+}
+
+section.about p, section.about h1 {
+    margin-right: 20%;
+    padding-left: 150px;
+    padding-right: 2px;
 }
 
 section.about h1{
@@ -147,7 +148,100 @@ section.about p{
     color: white;
     text-align: left;
 }
-/* About End */
+
+
+section.about{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+section.about #luka-tim{
+    border: solid purple;
+    padding-bottom: 45px;
+}
+
+section.about .container{
+    float: left;
+    border: solid yellow;
+    width: 50%;
+}
+
+  
+/* Apply css properties to ui-widgets class */
+.ui-widgets {
+    position: relative;
+    display: inline-block;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 9rem;
+    margin:1.5rem;
+    border: 1.2rem solid palegreen;
+    box-shadow: inset 0 0 7px grey;
+    border-left-color: blue;
+    border-top-color:blue ;
+    border-right-color: blue;
+    border-bottom-color: orange;
+    text-align: center;
+    box-sizing: border-box;
+}
+  
+/* Apply css properties to the second
+    child of ui-widgets class */
+.ui-widgets:nth-child(2) {
+    border-top-color:blue ;
+    border-right-color: blue;
+    border-left-color: blue;
+    border-bottom-color: orange;
+}
+  
+/* Apply css properties to ui-widgets
+   class and ui-values class */
+.ui-widgets .ui-values {
+    top: 30px;
+    position: absolute;
+    left: 10px;
+    right: 0;
+    font-weight: 700;
+    font-size: 2.0rem;
+}
+  
+/*  Apply css properties to ui-widgets 
+class and ui-labels class */
+.ui-widgets .ui-labels {
+    left: 0;
+    bottom: -65px;
+    text-shadow: 0 0 4px grey;
+    color:white;
+    position: absolute;
+    width: 100%;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+/* About Ends */
+
+/* Values Start */
+section.values {
+    color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+section.values h1{
+    font-size: xx-large;
+}
+
+section.values h3{
+    font-size: 1.5rem;
+}
+
+section.values p{
+    color: white;
+    font-size: small;
+    text-align: left;
+}
+/* Values End */
 
 /* SERVICES SECTION BEGIN */
 
@@ -167,7 +261,7 @@ section.about p{
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease-in-out 0s;
     border-radius: 3%;
-    margin-bottom: 13px;
+    margin-bottom: 20px;
 }
 
 .services .content:hover {
@@ -310,28 +404,57 @@ section.about p{
 
 /* SERVICES SECTION END */
 
-/* Float Shadow */
 
-
-/* MEDIA QUERIES */
-@media (max-width: 768px) {
-    .container {
-      width: 750px;
-    }
-  }
-  @media (min-width: 992px) {
-    .container {
-      width: 970px;
-    }
-  }
-  @media (min-width: 1200px) {
-    .container {
-      width: 1170px;
-    }
+.footer-container{
+    
+    padding-bottom: 4 rem;
+    
+    
 }
 
-/* @media only screen and (max-width: 500px) {
-    .content {
-        margin-bottom: 10px;
-    }
-} */
+.footer{
+    width: 80%;
+    height: 40vh;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.footer-heading{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4rem;
+}
+
+.footer-heading h4{
+    margin-bottom: 2rem;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    color: white !important;
+
+}
+
+.footer-heading a {
+    color: #b0b0b0;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.footer-heading a:hover{
+    color:#d8d8d8;
+    transition: 0.3s ease-out;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.copyright{
+    text-align:center;
+
+}
