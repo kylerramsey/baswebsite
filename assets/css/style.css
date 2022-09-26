@@ -149,25 +149,25 @@ section.about p{
     text-align: left;
 }
 
-
+/* Progress Bar */
 section.about{
     content: "";
     display: table;
     clear: both;
 }
 
-section.about #luka-tim{
-    border: solid purple;
+section.about #progress{
+    /* border: solid purple; */
     padding-bottom: 45px;
 }
 
 section.about .container{
     float: left;
-    border: solid yellow;
+    /* border: solid yellow; */
     width: 50%;
 }
 
-  
+
 /* Apply css properties to ui-widgets class */
 .ui-widgets {
     position: relative;
@@ -217,6 +217,34 @@ class and ui-labels class */
     width: 100%;
     font-size: 25px;
     font-family: 'Montserrat', sans-serif;
+}
+
+.ui-labels{
+    border-bottom: 1px dotted white;
+}
+
+.ui-labels::before{
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    width: 150px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: small;
+    border-radius: 5px;
+    padding: 5px 0;
+    transition: opacity 1s ease-in-out;
+
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 110%;
+}
+
+.ui-labels:hover::before{
+    opacity: 1;
+    visibility: visible;
 }
 /* About Ends */
 
