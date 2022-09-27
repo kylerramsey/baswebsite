@@ -592,45 +592,51 @@ ul {
 /* SERVICES SECTION END */
 
 
-.footer-container{
-    padding-bottom: 4 rem;
+footer {
+    padding: 40px 0;
+    position: relative;
+    background: rgba(14, 15, 20, 0.714);
 }
 
-.footer{
-    width: 80%;
-    height: 40vh;
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: auto;
-    padding-top: 70px;
+footer h3 {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
 
-.footer-heading{
-    display: flex;
-    flex-direction: column;
-    margin-right: 4rem;
-}
-
-.footer-heading h4{
-    margin-bottom: 2rem;
-    text-decoration: none;
-    font-family: 'Montserrat';
+footer p {
+    color: rgba(255,255,255,0.85);
+    font-size: 15px;
     font-weight: 400;
-    color: white !important;
-
+    margin-bottom: 0;
 }
 
-.footer-heading a {
-    color: #b0b0b0;
-    text-decoration: none;
-    margin-bottom: 0.5rem;
+footer .social-links {
+    margin-bottom: 5px;
 }
 
-.footer-heading a:hover{
-    color:#d8d8d8;
-    transition: 0.3s ease-out;
+footer .social-links a {
+    display: inline-block;
+    margin: 15px 4px;
+    font-size: 18px;
+    color: #fafafa;
+    background: #2B2B2B;
+    width: 42px;
+    height: 42px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+footer .social-links a:hover {
+    color: #111;
+    background-color: #fff;
+}
+
+footer .social-links a i {
+    line-height: 42px;
 }
 
 *{
